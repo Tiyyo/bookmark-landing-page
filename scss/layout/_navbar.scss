@@ -22,6 +22,26 @@
         letter-spacing: 0.15rem;
         height: 100%;
 
+        &--features  {
+            &:hover  {
+                color: var(--red_hover);
+                cursor: pointer;
+            }
+        }
+        &--pricing  {
+            &:hover  {
+                color: var(--red_hover);
+                cursor: pointer;
+            }
+        }
+        &--contact  {
+            &:hover  {
+                color: var(--red_hover);
+                cursor: pointer;
+            }
+        }
+
+
         &--login {
             background-color: var(--soft_red);
             color: white;
@@ -31,7 +51,14 @@
             justify-content: center;
             align-items: center;
             border-radius: 6px;
+            border: 2px solid var(--soft_red);
             width: 100px;
+
+            &:hover  {
+                cursor: pointer;
+                background-color: white;
+                color: var(--soft_red);
+            }
 
         }
     }

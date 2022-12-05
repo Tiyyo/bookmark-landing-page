@@ -1,0 +1,50 @@
+.features  {
+    font-family: 'Rubik', sans-serif;
+    width: 100vw;
+    
+
+    &__title  {
+        text-align: center;
+        @include h2;
+        margin-bottom: 20px;
+    }
+
+    &__text  {
+        @include p;
+        margin: 0 auto;
+        text-align: center;
+        width: 40%;
+        margin-bottom: 40px;
+    }
+    &__nav  {
+        width: 50%;
+        margin: 0 auto;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.285);
+        margin-bottom: 50px;
+
+        &__link  {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 400;
+            width: 100%;      
+            color:var(--text_feature); 
+            
+            &:hover  {
+                cursor: pointer;
+                color: var(--soft_red);
+            }
+        }
+        &__link[data-active=true]{
+            color: var(--title);
+            border-bottom: 3px solid var(--soft_red);
+            font-weight: 500;
+        }
+
+        
+    }
+
+}
