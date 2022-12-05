@@ -9,15 +9,16 @@
 //---import base folder
 @import 'base/base';
 @import 'base/reset';
-@import 'base/typography';
+
 
 //---import layout folder
 @import 'layout/header';
-@import 'layout/functionality_section';
-@import 'layout/productive_section';
-@import 'layout/quotes_section';
-@import 'layout/form_section';
+@import 'layout/contact';
+@import 'layout/extension';
+@import 'layout/faq';
+@import 'layout/features';
 @import 'layout/footer';
+@import 'layout/navbar';
 
 //----import components folder
 

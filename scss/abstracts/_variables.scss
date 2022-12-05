@@ -6,4 +6,11 @@ $breakpoints:  (
     'extra-large': (min-width: 1201px)
 );
 
+//--- Colors
 
+:root {
+    --soft_blue :  hsl(231, 69%, 60%);
+    --soft_red : hsl(0, 94%, 66%);
+    --text : hsl(229, 8%, 60%);
+    --title : hsl(229, 31%, 21%);
+}

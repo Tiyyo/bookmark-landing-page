@@ -1,0 +1,39 @@
+.navbar  {
+    font-size: 62.5%;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    height: 40px;
+    margin: 10px 0 35px 0;
+
+    &__logo  {
+       object-fit: contain;
+       max-width: 150px;
+    }
+
+    &__links  {
+        display: flex;
+        text-transform: uppercase;
+        align-items: center;
+        column-gap: 25px;
+        font-size: 0.8rem;
+        letter-spacing: 0.15rem;
+        height: 100%;
+
+        &--login {
+            background-color: var(--soft_red);
+            color: white;
+            padding: 0 10px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            width: 100px;
+
+        }
+    }
+
+}

@@ -1,0 +1,76 @@
+.header  {
+    width: 90vw;
+    align-self: flex-end;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin: 125px 0 75px 0;
+
+        &__title  {
+            font-size: 3rem;
+            font-weight: 500;
+            color: var(--title);
+            margin-bottom: 20px;
+        }
+
+        &__text  {
+            color: var(--text);
+            line-height: 1.3;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        &__buttons  {
+           &--chrome_btn  {
+                font-family: 'Rubik', sans-serif;
+                height: 45px;
+                background-color: var(--soft_blue);
+                color: white;
+                font-size: 0.9rem;
+                padding: 0 35px;
+                border-radius: 6px;
+                margin-right: 10px;
+                border: 0;
+           }
+           &--firefox_btn  {
+                font-family: 'Rubik', sans-serif;
+                height: 45px;
+                color: var(--title);
+                font-size: 0.9rem;
+                padding: 0 35px;
+                border-radius: 9px;
+                border: 0;
+           }
+        }
+    }
+    &__illustration  {
+        position: relative;
+        width: 50%;
+        border: 2px solid red;
+
+        &__tabletScreen  {
+            background: url('../../images/illustration-hero.svg') center/cover no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 23vh;
+            width: 42vw;
+        }
+        &__roundBg  {
+            position: absolute;
+            z-index: -1;
+            bottom: 0;
+            right: 0;
+            height: 18vh;
+            width: 35vw;
+            background-color: var(--soft_blue);
+            border-bottom-left-radius: 70px;
+            border-top-left-radius: 70px;
+        }
+    }
+}

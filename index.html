@@ -14,20 +14,24 @@
 
     <title>Frontend Mentor | Bookmark landing page</title>
 
+    <link rel="stylesheet" href="./scss/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <nav class="navbar">
-      <div class="navbar__logo"></div>
+      <img
+        class="navbar__logo"
+        src="./images/logo-bookmark.svg"
+        alt="brand logo"
+      />
       <ul class="navbar__links">
         <li class="navbar__links--features">Features</li>
         <li class="navbar__links--pricing">Pricing</li>
@@ -37,14 +41,18 @@
     </nav>
     <div class="header">
       <div class="header__wrapper">
-        <div class="header__wrapper__title">A Simple Bookmark Manager</div>
-        <div class="header__wrapper__text">
+        <h1 class="header__wrapper__title">A Simple Bookmark Manager</h1>
+        <p class="header__wrapper__text">
           A clean and simple interface to organize your favourite websites. Open
           a new browser tab and see your sites load instantly. Try it for free.
-        </div>
+        </p>
         <div class="header__wrapper__buttons">
-          <button class="chrome--btn">Get it on Chrome</button>
-          <button class="firefox--btn" Get it on Firefox></button>
+          <button class="header__wrapper__buttons--chrome_btn">
+            Get it on Chrome
+          </button>
+          <button class="header__wrapper__buttons--firefox_btn">
+            Get it on Firefox
+          </button>
         </div>
       </div>
       <div class="header__illustration">
