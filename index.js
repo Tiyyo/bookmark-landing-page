@@ -1,16 +1,8 @@
-function ValidateEmail(inputText)
-{
-var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-if(inputText.value.match(mailformat))
-{
-alert("Valid email address!");
-document.form1.text1.focus();
-return true;
-}
-else
-{
-alert("You have entered an invalid email address!");
-document.form1.text1.focus();
-return false;
-}
-}
+
+
+const emailRegex = 
+ new RegExp(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/, "gm");
+
+const isValidEmail = emailRegex.test("email_address@domain.com");
+
+console.log(isValidEmail) //true
