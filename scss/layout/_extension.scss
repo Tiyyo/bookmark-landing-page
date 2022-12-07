@@ -1,0 +1,69 @@
+.extension  {
+    font-family: 'Rubik', sans-serif;
+    width: 60vw;
+    margin-top: 150px;
+    text-align: center;
+
+    &__title  {
+        @include h2;
+        margin-bottom: 30px;
+    }
+
+    &__text  {
+        @include p;
+        padding: 0 140px;
+        margin-bottom: 50px;
+    }
+
+    &__links  {
+        display: flex;
+        align-items: start;
+        justify-content: space-around;
+        column-gap: 25px;
+    }
+
+    &__container  {
+        flex: 1 1 auto;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        box-shadow: 0px 14px 13px 0px rgba(0,0,0,0.15);
+        padding: 15px 0 25px 0 ;
+
+        &__logo  {
+            height:200px ;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & > img {
+                object-fit: cover;
+                width: 40%;
+                max-width: 150px;
+            }
+        }
+
+        &__title {
+            @include h3 ;
+            margin-bottom: 15px;
+        }
+
+        &__version  {
+            color: var(--text);
+            margin-bottom: 30px;
+        }
+
+        &__dot  {
+            background: url('../images/bg-dots.svg') center no-repeat;
+            height: 15px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        &__btn  {
+            @include blueBtn;
+            width: 85%;
+        }
+
+    }
+}
