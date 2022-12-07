@@ -55,3 +55,16 @@
 
     }
 }
+
+@mixin redBtn  {
+    background-color: var(--soft_red);
+    color: white;
+    border-radius: 6px;
+    border: 2px solid var(--soft_red);
+
+    &:hover  {
+        cursor: pointer;
+        background-color: white;
+        color: var(--soft_red);
+    }
+}
