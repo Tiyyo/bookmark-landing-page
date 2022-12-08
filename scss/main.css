@@ -170,11 +170,15 @@ input {
   margin: 20px 0 80px 0;
 }
 .contact__form input {
+  position: relative;
   border: 0;
   height: 45px;
   width: 275px;
   margin-right: 15px;
   border-radius: 6px;
+}
+.contact__form input.active {
+  border: 2px solid var(--sotf_red);
 }
 .contact__form input::-moz-placeholder {
   font-family: "rubik", sans-serif;
@@ -209,6 +213,37 @@ input {
   cursor: pointer;
   background-color: white;
   color: var(--soft_red);
+}
+
+.errors {
+  position: absolute;
+  height: 25px;
+  width: 277px;
+}
+.errors__image {
+  position: absolute;
+  background: url("../../images/icon-error.svg") center/cover no-repeat;
+  height: 20px;
+  width: 20px;
+  right: 17px;
+  top: -32px;
+}
+.errors__message {
+  position: absolute;
+  z-index: 5;
+  border: 3px solid hsl(0deg, 94%, 66%);
+  background-color: hsl(0deg, 94%, 66%);
+  height: 25px;
+  width: 277px;
+  display: flex;
+  align-items: center;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.errors__message > p {
+  color: white;
+  font-style: italic;
+  font-size: 0.7rem;
 }
 
 .extension {
@@ -294,7 +329,7 @@ input {
 .faq {
   width: 40%;
   min-width: 300px;
-  max-width: 500px;
+  max-width: 520px;
   margin-top: 150px;
   font-family: "Rubik", sans-serif;
   display: flex;
@@ -349,6 +384,10 @@ input {
   color: var(--title);
   font-weight: 500;
   flex: 2 1 auto;
+}
+.question:hover {
+  color: var(--red_hover);
+  cursor: pointer;
 }
 
 .arrow {
@@ -524,6 +563,10 @@ input {
        column-gap: 25px;
   flex: 4 1 auto;
 }
+.footer__links > li:hover {
+  color: var(--red_hover);
+  cursor: pointer;
+}
 .footer__media {
   height: 100%;
   display: flex;
@@ -535,7 +578,12 @@ input {
 }
 
 i {
+  color: rgba(255, 255, 255, 0.918);
   font-size: 1.4rem;
+}
+i:hover {
+  cursor: pointer;
+  color: var(--red_hover);
 }
 
 .navbar {
