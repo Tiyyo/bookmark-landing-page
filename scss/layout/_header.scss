@@ -1,8 +1,10 @@
 .header  {
     width: 90vw;
+    height: 60vh;
     align-self: flex-end;
     font-family: 'Rubik', sans-serif;
     display: flex;
+    padding-bottom: 5px;
 
 
     &__wrapper {
@@ -27,18 +29,31 @@
         &__buttons  {
            &--chrome_btn  {
                 @include blueBtn ;
+                width: 12vw;
+                min-width: 150px;
                 padding: 0 25px;
                 margin-right: 10px; 
                 font-weight: 500;       
-           }
-           &--firefox_btn  {
+            }
+            &--firefox_btn  {
+                width: 12vw;
+                min-width: 150px;
                 font-family: 'Rubik', sans-serif;
                 height: 45px;
                 color: var(--title);
                 font-size: 0.9rem;
+                font-weight: 500;
                 padding: 0 25px;
                 border-radius: 9px;
                 border: 0;
+                margin-top: 15px;
+                transition: 0.25s ease-out;
+                border: 2px solid grey;
+
+                &:hover  {
+                    background-color: white;
+                    border: 2px solid var(--title);
+                }
            }
         }
     }
@@ -52,9 +67,9 @@
             background-position-y: -10px;
             background-position-x: -30px;
             width: 95%;
-            height: 95%;
+            height: 100%;
             border-radius: 15px;
-            padding-bottom: 150px;
+            padding-bottom: 120px;
         }
         &__roundBg  {
             position: absolute;

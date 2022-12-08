@@ -33,11 +33,23 @@
             border: 0;
             height: 45px;
             width: 275px;
+            padding-left: 15px;
             margin-right: 15px;
-            border-radius: 6px;
-
-            &.active  {
-                border: 2px solid var(--sotf_red);
+            border-bottom-left-radius: 6px;
+            border-bottom-right-radius: 6px;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            transition:border 0.25s ease-in;
+            &:focus  {
+                outline: none;
+            }
+            
+            &[data-error-state="active"]{
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+                border: 3px solid hsl(0, 94, 66);
             }
 
             &::placeholder  {
@@ -62,10 +74,12 @@
     }
 }
 
-.errors  {
+.errors {
     position: absolute;
+    opacity: 0;
     height: 25px;
     width: 277px;
+    transition:opacity 0.25s ease-in;
 
     &__image  {
         position: absolute;
@@ -74,7 +88,6 @@
         width: 20px;
         right: 17px;
         top: -32px;
-        // transform: translateY(-50%);
     }
 
     &__message  {
@@ -84,7 +97,7 @@
         border: 3px solid hsl(0, 94%, 66%);
         background-color: hsl(0, 94%, 66%);
         height: 25px;
-        width: 277px;
+        width: 275px;
         display: flex;
         align-items: center;
         border-bottom-left-radius: 6px;
@@ -97,3 +110,48 @@
         }
     }
 }
+.errors[data-error-state="active"] {
+    opacity: 1;
+}
+
+
+// .errors[data-error-state="active"] {
+//     display: block;
+//     opacity: 1;
+//     position: absolute;
+//     height: 25px;
+//     width: 277px;
+
+//     &__image  {
+//         position: absolute;
+//         background: url('../../images/icon-error.svg') center/cover no-repeat;
+//         height: 20px;
+//         width: 20px;
+//         right: 17px;
+//         top: -32px;
+//         // transform: translateY(-50%);
+//     }
+
+//     &__message  {
+
+//         position: absolute;
+//         z-index: 5;
+//         border: 3px solid hsl(0, 94%, 66%);
+//         background-color: hsl(0, 94%, 66%);
+//         height: 25px;
+//         width: 277px;
+//         display: flex;
+//         align-items: center;
+//         border-bottom-left-radius: 6px;
+//         border-bottom-right-radius: 6px;
+
+//         & > p {
+//             color: white;
+//             font-style: italic;
+//             font-size: 0.7rem;
+//         }
+//     }
+// }
+
+
+

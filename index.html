@@ -139,7 +139,7 @@
         got a favourite you’d like us to prioritize.
       </div>
       <div class="extension__links">
-        <div class="extension__container">
+        <div class="extension__container first-container">
           <div class="extension__container__logo">
             <img src="./images/logo-chrome.svg" alt="" />
           </div>
@@ -151,7 +151,7 @@
           </button>
         </div>
 
-        <div class="extension__container">
+        <div class="extension__container second-container">
           <div class="extension__container__logo">
             <img src="./images/logo-firefox.svg" alt="logo firefox" />
           </div>
@@ -163,7 +163,7 @@
           </button>
         </div>
 
-        <div class="extension__container">
+        <div class="extension__container third-container">
           <div class="extension__container__logo">
             <img src="./images/logo-opera.svg" alt="logo opera" />
           </div>
@@ -274,14 +274,12 @@
     <div class="contact">
       <p class="contact__title">35000+ already joined</p>
       <h2 class="contact__text">Stay up-to-date with what we're doing</h2>
-      <form action="get" class="contact__form">
+      <form action="post" class="contact__form" id="signup-newsletter">
         <input
-          type="email"
+          type="text"
           name="signup"
           id="newsletter"
-          autocomplete="email"
           placeholder="Enter your adress mail"
-          required
         />
         <div class="errors">
           <div class="errors__image"></div>
@@ -289,7 +287,7 @@
             <p>Whoops, make sure it's an email</p>
           </div>
         </div>
-        <button type="submit">Contact Us</button>
+        <button type="submit" id="contact_submit_btn">Contact Us</button>
       </form>
     </div>
     <div class="footer">

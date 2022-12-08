@@ -47,6 +47,7 @@
     font-size: 0.9rem;
     border-radius: 6px;
     border: 2px solid var(--soft_blue);
+    transition: 0.250s ease-out;
     
 
     &:hover  {
@@ -61,6 +62,7 @@
     color: white;
     border-radius: 6px;
     border: 2px solid var(--soft_red);
+    transition: 0.25s;
 
     &:hover  {
         cursor: pointer;
