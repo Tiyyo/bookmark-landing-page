@@ -43,20 +43,36 @@
     font-family: 'Rubik', sans-serif;
     width: 100vw;
     margin-top: 10vh;
+    display: flex;
+
+    @include respond-to ('medium') {
+        flex-direction: column;
+    }
     
 
     &__title  {
         text-align: center;
         @include h2;
         margin-bottom: 20px;
+
+        @include respond-to ('medium') {
+            font-size: 1.6rem;
+        }
     }
 
     &__text  {
+
         @include p;
         margin: 0 auto;
         text-align: center;
         width: 40%;
         margin-bottom: 40px;
+
+        @include respond-to ('medium') {
+            font-size: 1rem;
+            width: 100%;
+            padding: 0 25px;
+        }
     }
     &__nav  {
         width: 50%;
@@ -67,6 +83,11 @@
         border-bottom: 1px solid rgba(0, 0, 0, 0.285);
         margin-bottom: 50px;
 
+        @include respond-to ('medium') {
+            flex-direction: column;
+            width: 85%;
+        }
+
         &__link  {
             display: flex;
             align-items: center;
@@ -75,6 +96,21 @@
             width: 100%;      
             color:var(--text_feature); 
             
+            @include respond-to ('medium') {
+
+                padding: 10px 0 ;
+                height: 100%;
+
+            &:nth-child(1) {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.285);
+                border-top: 1px solid rgba(0, 0, 0, 0.285);
+            }
+            &:nth-child(2) {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.285);
+            }
+            
+            }
+
             &:hover  {
                 cursor: pointer;
                 color: var(--soft_red);
@@ -90,7 +126,7 @@
     }
     &__wrapper  {
         position: relative;
-        display: flex;
+        display: none;
 
         &__roundBg  {
             position: absolute;

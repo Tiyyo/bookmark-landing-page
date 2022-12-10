@@ -15,6 +15,7 @@
     <title>Frontend Mentor | Bookmark landing page</title>
 
     <link rel="stylesheet" href="./scss/main.css" />
+    <link href="./scss/components/hamburger/hamburgers.css" rel="stylesheet" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,6 +43,11 @@
         <li class="navbar__links--contact">Contact</li>
         <li class="navbar__links--login">Login</li>
       </ul>
+      <button class="hamburger hamburger--elastic" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
     </nav>
     <div class="header">
       <div class="header__wrapper">
@@ -79,7 +85,11 @@
       <div class="features__wrapper">
         <div class="features__wrapper__roundBg"></div>
 
-        <div class="features__wrapper__bookmark feature" data-active="">
+        <div
+          class="features__wrapper__bookmark feature"
+          data-active=""
+          data-name-page="simpleBooking"
+        >
           <div class="feature__illustration">
             <img
               src="./images/illustration-features-tab-1.svg"
@@ -97,7 +107,11 @@
           </div>
         </div>
 
-        <div class="features__wrapper__search feature" data-active="">
+        <div
+          class="features__wrapper__search feature"
+          data-active=""
+          data-name-page="speedySearching"
+        >
           <div class="feature__illustration">
             <img
               src="./images/illustration-features-tab-2.svg"
@@ -114,7 +128,11 @@
           </div>
         </div>
 
-        <div class="features__wrapper__share feature" data-active="">
+        <div
+          class="features__wrapper__share feature"
+          data-active=""
+          data-name-page="easySharing"
+        >
           <div class="feature__illustration">
             <img
               src="./images/illustration-features-tab-3.svg"
@@ -183,10 +201,10 @@
         answered please feel free to email us.
       </p>
       <div class="faq__accordion">
-        <div class="accordion--section">
+        <div class="accordion--section" data-question-id="1">
           <div class="question--section">
             <p class="question">What is Bookmark ?</p>
-            <div class="arrow">
+            <div class="arrow" data-arrow-number="1">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                 <path
                   fill="none"
@@ -203,10 +221,10 @@
             quis quam ornare mattis.
           </div>
         </div>
-        <div class="accordion--section">
+        <div class="accordion--section" data-question-id="2">
           <div class="question--section">
             <p class="question">How can I request a new browser ?</p>
-            <div class="arrow">
+            <div class="arrow" data-arrow-number="2">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                 <path
                   fill="none"
@@ -226,10 +244,10 @@
             imperdiet.
           </div>
         </div>
-        <div class="accordion--section">
+        <div class="accordion--section" data-question-id="3">
           <div class="question--section">
             <p class="question">Is there a mobile app ?</p>
-            <div class="arrow">
+            <div class="arrow" data-arrow-number="3">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                 <path
                   fill="none"
@@ -247,10 +265,10 @@
             ex et ultricies bibendum.
           </div>
         </div>
-        <div class="accordion--section">
+        <div class="accordion--section" data-question-id="4">
           <div class="question--section">
             <p class="question">What about other Chromium browsers ?</p>
-            <div class="arrow">
+            <div class="arrow" data-arrow-number="4">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
                 <path
                   fill="none"

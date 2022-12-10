@@ -5,6 +5,7 @@
     margin: 0 auto;
     margin-top: 150px;
     text-align: center;
+    display: none;
 
     &__title  {
         @include h2;
