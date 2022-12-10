@@ -219,13 +219,22 @@
 
         }
         &__bookmark  {
-            display: flex;
+            display: none;
+&[data-active="true"]{
+display : flex
+}
         }
         &__search  {
             display: none;
+&[data-active="true"]{
+display : flex
+}
         }
         &__share  {
             display: none;
+&[data-active="true"]{
+display : flex
+}
         }
 
     }
