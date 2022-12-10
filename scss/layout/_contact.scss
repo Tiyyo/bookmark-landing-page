@@ -2,10 +2,11 @@
     font-family: 'Rubik', sans-serif;
     background-color: var(--soft_blue);
     width: 100vw;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
+
 
 
     &__title {
@@ -28,6 +29,13 @@
     &__form  {
         margin: 20px 0 80px 0 ;
 
+        @include respond-to ('medium') {
+            display: flex;
+            flex-direction: column;
+            row-gap: 50px;
+            width: 260px;
+        }
+
         input {
             position: relative;
             border: 0;
@@ -40,6 +48,11 @@
             border-top-left-radius: 6px;
             border-top-right-radius: 6px;
             transition:border 0.25s ease-in;
+
+            @include respond-to ('medium') {
+                width: 260px;
+                max-width: 350px;
+            }
             &:focus  {
                 outline: none;
             }
@@ -75,11 +88,17 @@
 }
 
 .errors {
-    position: absolute;
+    position: absolute;   
     opacity: 0;
     height: 25px;
-    width: 277px;
+    width: 260px;
     transition:opacity 0.25s ease-in;
+
+    @include respond-to ('medium')  {
+        width: 260px;
+        margin-bottom: 40px;
+
+    }
 
     &__image  {
         position: absolute;
@@ -88,6 +107,10 @@
         width: 20px;
         right: 17px;
         top: -32px;
+
+        @include respond-to ('medium') {
+            top: 15px;
+        }
     }
 
     &__message  {
@@ -97,11 +120,18 @@
         border: 3px solid hsl(0, 94%, 66%);
         background-color: hsl(0, 94%, 66%);
         height: 25px;
-        width: 275px;
+        // width: 275px;
         display: flex;
         align-items: center;
         border-bottom-left-radius: 6px;
         border-bottom-right-radius: 6px;
+
+        @include respond-to ('medium') {
+            width: 260px;
+            height: 25px;
+            bottom: 0;
+            top: 45px;
+        }
 
         & > p {
             color: white;

@@ -24,6 +24,10 @@
     font-weight: 500;
     font-size: 2rem;
     color: var(--title);
+
+    @include respond-to ('medium') {
+        font-size: 1.6rem
+    }
 }
 
 @mixin h3 {
@@ -37,6 +41,9 @@
     font-weight: 400;
     line-height: 1.5;
     font-size: 1.2rem;
+    @include respond-to ('medium') {
+        font-size: 0.9rem
+    }
 }
 
 @mixin blueBtn  {

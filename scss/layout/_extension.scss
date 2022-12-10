@@ -5,17 +5,31 @@
     margin: 0 auto;
     margin-top: 150px;
     text-align: center;
-    display: none;
+    display: flex;
+
+    @include respond-to ('medium') {
+        flex-direction: column;
+        width: 100%
+
+    }
 
     &__title  {
         @include h2;
         margin-bottom: 30px;
+        @include respond-to ('medium') {
+            font-size: 1.5rem
+        }
+    
+
     }
 
     &__text  {
         @include p;
         padding: 0 140px;
         margin-bottom: 50px;
+        @include respond-to ('medium') {
+            padding: 0 35px;
+        }
     }
 
     &__links  {
@@ -23,6 +37,11 @@
         align-items: start;
         justify-content: space-around;
         column-gap: 25px;
+        @include respond-to ('medium') {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__container  {
@@ -31,6 +50,12 @@
         border-bottom-right-radius: 12px;
         box-shadow: 0px 14px 13px 0px rgba(0,0,0,0.15);
         padding: 15px 0 25px 0 ;
+
+        @include respond-to ('medium') {
+            width: 75%;
+            max-width: 300px;
+
+        }
 
         &__logo  {
             height:200px ;
@@ -73,10 +98,19 @@
 
 .first-container  {
     margin-top: 20px;
+    @include respond-to ('medium') {
+        margin-top: 30px;
+    }
 }
 .second-container  {
     margin-top: 60px;
+    @include respond-to ('medium') {
+        margin-top: 30px;
+    }
 }
 .third-container  {
     margin-top: 100px;
+    @include respond-to ('medium') {
+        margin-top: 30px;
+    }
 }

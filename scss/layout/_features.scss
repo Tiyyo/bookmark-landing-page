@@ -2,6 +2,11 @@
     display: flex;
     margin-top: 2vh;
 
+    @include respond-to ('medium') {
+        flex-direction: column;
+        text-align: center;
+    }
+
     &__illustration  {
         width: 50%;
         position: relative;
@@ -10,24 +15,46 @@
         align-items: flex-start;
         padding-bottom: 50px;
 
+        @include respond-to ('medium') {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            & > img {
+                width: 83%;
+            }
+        }
         & > img   {
             object-fit: contain;
             height: 100%;
             max-height: 500px;
-
         }
+
+        
+    
     }
     &__description  {
         width: 50%;
         padding: 80px 10vw 25px 7vw ;
+        @include respond-to ('medium')  {
+            width: 100%
+        }
+    
     }
     &__title  {
         @include h2 ;
         margin-bottom: 30px;
+
+        @include respond-to ('medium') {
+            font-size: 1.4rem;
+        }
     }
     &__text  {
         @include p ;
         margin-bottom: 30px;
+        @include respond-to ('medium') {
+            font-size: 0.9rem;
+        }
     }
     &__btnInfo  {
         width: 100px;
@@ -35,6 +62,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @include respond-to ('medium') {
+            display: none;
+        }
     }
     
 }
@@ -85,7 +116,11 @@
 
         @include respond-to ('medium') {
             flex-direction: column;
+            row-gap: 0;
             width: 85%;
+            max-width: 500px;
+            border: 0;
+            height: auto;
         }
 
         &__link  {
@@ -98,8 +133,7 @@
             
             @include respond-to ('medium') {
 
-                padding: 10px 0 ;
-                height: 100%;
+                height: 60px;
 
             &:nth-child(1) {
                 border-bottom: 1px solid rgba(0, 0, 0, 0.285);
@@ -108,7 +142,9 @@
             &:nth-child(2) {
                 border-bottom: 1px solid rgba(0, 0, 0, 0.285);
             }
-            
+            &:nth-child(3){    
+                border-bottom: 1px solid rgba(0, 0, 0, 0.285);
+            }
             }
 
             &:hover  {
@@ -118,15 +154,38 @@
         }
         &__link[data-active=true]{
             color: var(--title);
-            border-bottom: 3px solid var(--soft_red);
             font-weight: 500;
+            position: relative;
+            border-bottom: 3px solid var(--soft_red);
+
+
+            @include respond-to ('medium') {
+                position: relative;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.285);
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    height: 4px;
+                    width: 120px;
+                    background-color: var(--soft_red);
+    
+                }
+            }
+
+
         }
 
         
     }
     &__wrapper  {
         position: relative;
-        display: none;
+        display: flex;
+
+        @include respond-to ('medium') {
+            flex-direction: column-reverse;
+        }
 
         &__roundBg  {
             position: absolute;
@@ -137,7 +196,27 @@
             width: 45%;
             background-color: var(--soft_blue);
             border-bottom-right-radius: 150px;
-            border-top-right-radius: 150px;            
+            border-top-right-radius: 150px;         
+            
+            @include respond-to ('medium') {
+                display: none;
+                height: 40vh;
+                width: 85%;
+            }
+        }
+        &__roundBg--mobile  {
+            @include respond-to ('medium') {
+                position: absolute;
+                z-index: -1;
+                bottom: 0;
+                left: 0;
+                height: 33vh;
+                width: 80%;
+                background-color: var(--soft_blue);
+                border-bottom-right-radius: 150px;
+                border-top-right-radius: 150px;    
+            }
+
         }
         &__bookmark  {
             display: flex;
@@ -152,4 +231,5 @@
     }
 
 }
+
 
