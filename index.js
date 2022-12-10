@@ -11,8 +11,11 @@ const arrows = document.querySelectorAll(".arrow");
 const accordionSection = document.querySelectorAll(".accordion--section");
 const tabLinks = document.querySelectorAll(".features__nav__link");
 const pageTab = document.querySelectorAll(".feature");
+const hamburgerBtn = document.getElementsByClassName("hamburger")[0];
+const navMobile = document.getElementsByClassName("navlinks__mobile")[0];
+const navbarLogo = document.getElementsByClassName("navbar__logo")[0];
 
-// console.log(pageTab);
+console.log(navbarLogo);
 
 const emailValidation = () => {
   let emailToTest = inputEmailNewsletter.value;
@@ -63,6 +66,21 @@ const displayFeatures = (event) => {
     }
   });
 };
+
+hamburgerBtn.addEventListener("click", (e) => {
+  hamburgerBtn.classList.toggle("is-active");
+
+  if (navMobile.dataset.mobileNav === "active") {
+    navMobile.removeAttribute("data-mobile-nav");
+  } else {
+    navMobile.setAttribute("data-mobile-nav", "active");
+  }
+  if (navbarLogo.dataset.mobileNav === "active") {
+    navbarLogo.removeAttribute("data-mobile-nav");
+  } else {
+    navbarLogo.setAttribute("data-mobile-nav", "active");
+  }
+});
 
 formNewsletter.addEventListener("submit", (e) => {
   e.preventDefault();
