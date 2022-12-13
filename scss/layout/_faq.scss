@@ -40,6 +40,14 @@
 
 .accordion--section  {
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+
+    &[data-display-answer="active"]  {
+        & > .answer--section {
+            padding-bottom: 25px;
+            height: auto;
+            transition: 0.8s ease-out;
+        }
+    }
 }
 
 .question--section  {
@@ -65,22 +73,26 @@
 }
 .arrow {
     flex: 0 1 auto;
-    // &.active  {
+    transition: 0.25s ease-in-out;
+    
 
-    // }
+    &.active  {
+        transform: rotateZ('180deg');
+    }
 }
 
 .answer--section   {
     font-size: 0.9rem;
     line-height: 1.9;
     padding: 0px 50px 0px 5px ;
-    display: block;
     height: 0;
     overflow: hidden;
+    transition: 0.25s ease-in-out;
 
     &.active  {
         padding-bottom: 25px;
         height: auto;
+
 
     }
 }

@@ -1,6 +1,4 @@
 .feature  {
-//----
-//----
     display: flex;
     margin-top: 2vh;
 
@@ -76,9 +74,10 @@
     font-family: 'Rubik', sans-serif;
     width: 100vw;
     margin-top: 10vh;
-    display: flex;
+    display: block;
 
     @include respond-to ('medium') {
+        display: flex;
         flex-direction: column;
     }
     
@@ -212,7 +211,7 @@
                 z-index: -1;
                 bottom: 0;
                 left: 0;
-                height: 33vh;
+                height: 66%;
                 width: 80%;
                 background-color: var(--soft_blue);
                 border-bottom-right-radius: 150px;
@@ -220,26 +219,6 @@
             }
 
         }
-        &__bookmark  {
-            display: none;
-            
-            &[data-active="true"]{
-                display : flex
-            }
-        }
-        &__search  {
-            display: none;
-&[data-active="true"]{
-display : flex
-}
-        }
-        &__share  {
-            display: none;
-&[data-active="true"]{
-display : flex
-}
-        }
-
     }
 
 }

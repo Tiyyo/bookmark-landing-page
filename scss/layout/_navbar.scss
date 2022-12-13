@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-between;
     width: 80vw;
+    max-width: 1350px;
     height: 40px;
     margin: 10px 0 75px 0;
 
@@ -169,4 +170,11 @@
         }
     }
     } 
+}
+
+.hamburger  {
+    display: none;
+    @include respond-to ('medium')  {
+        display: flex;
+    }
 }

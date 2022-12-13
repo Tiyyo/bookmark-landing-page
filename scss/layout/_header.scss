@@ -1,6 +1,7 @@
 .header  {
     font-family: 'Rubik', sans-serif;
     width: 90vw;
+    max-width: 1350px;
     height: 60vh;
     display: flex;
     align-self: flex-end;
@@ -110,6 +111,14 @@
             height: 100%;
             border-radius: 15px;
             // padding-bottom: 120px;
+
+            @include respond-to ('medium')  {
+                height: 100%;
+                width: auto;
+                max-width: 80%;
+    
+                border: 1px solid black;
+            }
 
         }
         &__roundBg  {

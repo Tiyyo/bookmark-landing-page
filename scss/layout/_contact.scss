@@ -15,6 +15,10 @@
         letter-spacing: 0.5rem;
         font-weight: 400;
         margin-top: 50px;
+        max-width: 85vw;
+        @include respond-to ('medium') {
+            text-align: center;
+        }
         }
 
     &__text  {
@@ -22,12 +26,14 @@
         text-align: center;
         margin-top: 35px;
         line-height: 1.5;
+        max-width: 85vw;
         @include h2;
         color: white;
     }
 
     &__form  {
         margin: 20px 0 80px 0 ;
+        max-width: 85vw;;
 
         @include respond-to ('medium') {
             display: flex;
@@ -51,7 +57,7 @@
 
             @include respond-to ('medium') {
                 width: 260px;
-                max-width: 350px;
+                max-width: 85vw;
             }
             &:focus  {
                 outline: none;
@@ -109,6 +115,7 @@
         top: -32px;
 
         @include respond-to ('medium') {
+            border: 1px solid black;
             top: 15px;
         }
     }
@@ -125,6 +132,7 @@
         align-items: center;
         border-bottom-left-radius: 6px;
         border-bottom-right-radius: 6px;
+        max-width: 85vw;
 
         @include respond-to ('medium') {
             width: 260px;
