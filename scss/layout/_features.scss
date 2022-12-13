@@ -222,9 +222,10 @@
         }
         &__bookmark  {
             display: none;
-&[data-active="true"]{
-display : flex
-}
+            
+            &[data-active="true"]{
+                display : flex
+            }
         }
         &__search  {
             display: none;
