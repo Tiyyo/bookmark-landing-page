@@ -244,4 +244,24 @@ display : flex
 
 }
 
+.features__wrapper__bookmark {
+    display : none ;
+    &[data-active="true"] {
+        display : flex ;
+    }   
+}
+
+.features__wrapper__search {
+    display : none ;
+    &[data-active="true"] {
+        display : flex ;
+    }   
+}
+
+.features__wrapper__share {
+    display : none ;
+    &[data-active="true"] {
+        display : flex ;
+    }   
+}
 
