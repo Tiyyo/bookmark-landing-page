@@ -15,7 +15,7 @@ const hamburgerBtn = document.getElementsByClassName("hamburger")[0];
 const navMobile = document.getElementsByClassName("navlinks__mobile")[0];
 const navbarLogo = document.getElementsByClassName("navbar__logo")[0];
 
-console.log(navbarLogo);
+console.log(accordionSection);
 
 const emailValidation = () => {
   let emailToTest = inputEmailNewsletter.value;
@@ -92,6 +92,10 @@ arrows.forEach((arrow) => {
   arrow.addEventListener("click", () => {
     displayAnswerFaq(arrow);
   });
+});
+
+accordionSection.forEach((section) => {
+  section.addEventListener("click", () => {});
 });
 
 tabLinks.forEach((link) => {

@@ -68,7 +68,6 @@ input {
 .header {
   font-family: "Rubik", sans-serif;
   width: 90vw;
-  max-width: 1350px;
   height: 60vh;
   display: flex;
   align-self: flex-end;
@@ -209,7 +208,7 @@ input {
   z-index: -1;
   bottom: 0;
   right: 0;
-  height: 350px;
+  height: 50%;
   width: 35vw;
   background-color: var(--soft_blue);
   border-bottom-left-radius: 150px;
@@ -815,6 +814,7 @@ input {
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.285);
   margin-bottom: 50px;
+  text-align: center;
 }
 @media (max-width: 768px) {
   .features__nav {
