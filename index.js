@@ -94,9 +94,6 @@ arrows.forEach((arrow) => {
   });
 });
 
-accordionSection.forEach((section) => {
-  section.addEventListener("click", () => {});
-});
 
 tabLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
